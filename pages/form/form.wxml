@@ -1,0 +1,35 @@
+<view class='familyCreateForm' hidden='{{show}}'>
+  <view class='header' style='height:150rpx'>
+   
+  </view>
+  <form bindsubmit="formSubmit" bindreset="formReset" report-submit="true">
+    <view class='formItem'>
+      <view class='image-small'>
+        <text class='iconfont icon-home1'></text>
+      </view>
+      <input placeholder="请输入名称" name="familyName" maxlength="10" placeholder-class="placeholderStyle" focus/>
+    </view>
+        <view class='formItem'>
+      <view class='image-small groupAndPerson'>
+        <text class='iconfont icon-group'></text>
+      </view>
+      <picker bindchange="bindTypeChange" range-key="typeName" name="type" value="{{typeIndex}}" range="{{typeList}}">
+        <view class="weui-select ">{{typeList[typeIndex].typeName}}</view>
+      </picker>
+    </view>
+    <view class='formItem'>
+      <view class='image-small'>
+        <text class='iconfont icon-homenav8'></text>
+      </view>
+      <picker bindchange="bindRoleIdChange" name="roleId" range-key="shortName" value="{{roleIdIndex}}" range="{{roleIdList}}">
+        <view class="weui-select ">{{roleIdList[roleIdIndex].shortName}}</view>
+      </picker>
+    </view>
+    <view class='submit'>
+      <button formType="submit" hover-class='other-button-hover'>确认</button>
+    </view>
+  </form>
+  <loading hidden="{{submitHidden}}">
+    正在提交...
+  </loading>
+</view>

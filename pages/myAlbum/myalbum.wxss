@@ -1,0 +1,161 @@
+.itemTitle {
+  background-color: rgba(248, 248, 248, 0.5);
+  border-top: 1rpx solid #eee;
+  border-bottom: 1rpx solid #eee;
+  padding: 16rpx 30rpx;
+}
+.itemTitle .headline {
+  font-size: 14pt;
+  color: #f66e3e;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.album {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30rpx 15rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.picContainer {
+  width: 360rpx;
+  padding: 0 40rpx;
+  box-sizing: border-box;
+  position: relative;
+  margin-bottom: 30rpx;
+
+}
+.picContainer navigator {
+  width: 180rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+ .picContainer image {
+  width: 100%;
+  height: 180rpx;
+  border-radius: 50%;
+  border: 4rpx solid #fff0b1;
+}
+
+ .picContainer .albumName {
+  width: 180rpx;
+  font-size: 13pt;
+  color: #888;
+  margin-top: 20rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+}
+
+.operate {
+  position: absolute;
+  top: -30rpx;
+  right:0;
+  width: 130rpx;
+  height: 80rpx;
+  z-index: 77;
+  text-align: center;
+}
+.operateBtn {
+  position: absolute;
+  top: 60rpx;
+  left: 0;
+  width: 130rpx;
+  height: auto;
+  z-index: 88;
+  border: 1rpx solid #eee;
+}
+.operateBtn view {
+  font-size: 11pt;
+  height: 60rpx;
+  width: 100%;
+  text-align: center;
+  line-height: 60rpx;
+}
+.operateBtn view:first-child {
+  border-bottom: 1rpx solid #eee;
+}
+
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 555;
+}
+
+.modal-dialog {
+  width: 540rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 666;
+  background: #f9f9f9;
+  transform: translate(-50%, -80%);
+  border-radius: 36rpx;
+}
+
+.modal-title {
+  padding-top: 50rpx;
+  font-size: 36rpx;
+  color: #030303;
+  text-align: center;
+}
+
+.modal-content {
+  padding: 50rpx 32rpx;
+}
+
+.modal-input {
+  display: flex;
+  background: #fff;
+  border: 2rpx solid #ddd;
+  border-radius: 4rpx;
+  font-size: 28rpx;
+}
+
+.input {
+  width: 100%;
+  height: 82rpx;
+  font-size: 28rpx;
+  line-height: 28rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  color: #333;
+}
+
+input-holder {
+  color: #666;
+  font-size: 11pt;
+}
+
+.modal-footer {
+  display: flex;
+  flex-direction: row;
+  height: 86rpx;
+  border-top: 1px solid #dedede;
+  font-size: 34rpx;
+  line-height: 86rpx;
+}
+
+.btn-cancel {
+  width: 50%;
+  color: #666;
+  text-align: center;
+  border-right: 1px solid #dedede;
+}
+
+.btn-confirm {
+  width: 50%;
+  color: #ec5300;
+  text-align: center;
+}

@@ -1,0 +1,20 @@
+<view class='familyCreateForm' hidden='{{show}}'>
+  <view class='invitationInfo'>
+    <view>{{invitationInfo.currentUserName}}邀请你加入{{invitationInfo.currentFamilyName}}</view>
+  </view>
+  <view class='choose'>请在下方选取您的身份类型</view>
+  <form bindsubmit="formSubmit">
+    <view class='formItem'>
+      <view class='image-small'>
+        <text class='iconfont icon-homenav8'></text>
+      </view>
+      <picker bindchange="bindRoleIdChange" name="roleId" range-key="shortName" value="{      {roleIdIndex}}" range="{{roleIdList}}">
+        <view class="weui-select ">{{roleIdList[roleIdIndex].shortName}}</view>
+      </picker>
+    </view>
+    <view class='btn'>
+      <button hover-class='other-button-hover' plain='true' class='cancel' size='mini' bindtap='cancelHandle'>取消</button>
+      <button formType="submit" hover-class='other-button-hover' class='submit' size='mini'>确认</button>
+    </view>
+  </form>
+</view>

@@ -1,0 +1,40 @@
+<!-- 预览视屏   -->
+ <view class='photoAndVideo' wx:if='{{uploadShow}}' >
+    <view class='showPhotoAndVideo'>
+      <video src="{{videoSrc}}" style='width:{{width}}px;height:{{height}}px'></video>
+    </view>
+  <view class='uploadAlbumBtn'>
+    <!-- <button class='cancel' size='mini' plain="true" bindtap='backPrevious'>取消</button> -->
+    <button class='releaseBtn' bindtap='releaseBtn' data-filePath='{{src ? src : videoSrc}}'>发布</button>
+  </view>
+</view> 
+
+<!--预览照片  -->
+<view class='uploadPhoto' wx:if='{{!uploadShow}}'>
+  <view class="weui-cell" >
+    <view class="weui-cell__bd">
+      <view class="weui-uploader">
+        <view class="weui-uploader__hd">
+          <view class="weui-uploader__title">上传图片至相册</view>
+          <view class="weui-uploader__info">{{files.length}}/9</view>
+        </view>
+        <view class="weui-uploader__bd">
+          <view class="weui-uploader__files" id="uploaderFiles">
+            <block wx:for="{{files}}" wx:key="*this">
+              <view class="weui-uploader__file" bindtap="previewImage" id="{{item}}">
+                <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+              </view>
+            </block>
+          <view class="weui-uploader__input-box">
+              <view class="weui-uploader__input" bindtap="chooseImage"></view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='uploadAlbumBtn'>
+        <!-- <button size='mini' class='cancelBtn' plain='true' bindtap='backPrevious'>取消</button> -->
+        <button class='releaseBtn' bindtap='releaseBtn' data-filePath='{{files}}'>发布</button>
+    </view>
+</view>

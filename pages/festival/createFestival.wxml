@@ -1,0 +1,34 @@
+<view class="festivalCreateForm">
+  <form bindsubmit="formSubmit" report-submit="true">
+    <view  class="weui-cells weui-cells_after-title">
+    <view class="weui-cell">
+      <view class='iconfont icon-homefooter2'>
+      </view>
+      <view class="weui-cell__bd">
+        <input placeholder='请在这里输入节日名称' name="holidayName"/>
+      </view>
+    </view>
+    <view class="weui-cell">
+       <view class='iconfont icon-calendar2'></view>
+      <view class="weui-cell__bd">
+          <picker mode="date" value="{{date}}" start="1900-01-01" end="3000-01-01" bindchange="bindDateChange" name="holidayStartTime">
+             <view class="picker">
+              <view>{{date}}</view> 
+            </view> 
+        
+          </picker>
+      </view>
+    </view>
+       <view class="weui-cell">
+      <view class="weui-cell__hd">
+        描述
+      </view>
+      <view class="weui-cell__bd">
+       <input placeholder='请在这里输入描述' name="holidayDesc" maxlength='20'/>
+        <!-- <textarea placeholder='请在这里输入备注信息' name="remark" auto-height/> -->
+      </view>
+    </view>
+  </view>
+  <button class='save' formType="submit">保存</button>
+</form>
+</view>

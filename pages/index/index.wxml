@@ -1,0 +1,61 @@
+  <view class="familyTitle">
+    <view class='families' >
+        <view class='list' bindtap='showFamilyListHandle'>
+          <text class='iconfont icon-home'></text>
+          <text> {{familyInfo.familyName}}</text>
+          <text class='iconfont icon-arrowup' hidden='{{!showFamilyList}}'></text>
+          <text class='iconfont icon-arrowdown' hidden='{{showFamilyList}}'></text>
+        </view>
+        <view class='familyList' hidden='{{!showFamilyList}}'>
+            <view class='familyItem' 
+                  wx:for="{{familyList}}" 
+                  wx:key="id" 
+                  data-family-id='{{item.id}}'
+                  bindtap='toggleFamily'>{{item.familyName}}</view>
+        </view>
+    </view>
+</view>
+<view class="itemTitle">
+    <view class="headline">相册列表</view>
+  </view>
+<view class='album'>
+   <navigator class='picContainer'
+              wx:for="{{albumPicList}}"
+              wx:key="id" 
+              hover-class='none'
+              url='/pages/album/indexPhotoList?albumID={{item.id}}&albumName={{item.file_name}}'>
+    <image src="{{item.file_url}}" mode="aspectFill"></image>
+    <text class='albumName'>{{item.file_name}}</text>
+    <view class="weui-badge" wx:if="{{item.count!==0}}">{{item.count}}</view> 
+  </navigator>
+   <view class='picContainer' bindtap='showDialogBtn'>
+     <view class='iconfont icon-plus'></view>
+     <text class='albumName'>创建相册</text>
+  </view>
+</view>
+<view class="itemTitle">
+    <view class="headline">叮当介绍</view>
+  </view>
+<view class='description'>
+  叮当相册是一款照片分类存储的,记录回忆的产品,在这里您可以将自己的照片按相册进行整理管理分类,永久存储。
+</view>
+
+
+<!--相册创建弹窗-->
+<view class="modal-mask" catchtouchmove="preventTouchMove" hidden='{{!showMask}}'></view>
+<view class="modal-dialog" hidden="{{!showAlbum}}">
+  <view class="modal-title">添加相册</view>
+  <view class="modal-content">
+    <view class="modal-input">
+      <input placeholder-class="input-holder" type="text" maxlength="10" class="input" placeholder="请输入相册名称" bindinput="albumNameChange" value='{{albumName}}'></input>
+    </view>
+  </view>
+  <view class="modal-footer">
+    <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+    <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">确定</view>
+  </view>
+</view>
+
+
+
+

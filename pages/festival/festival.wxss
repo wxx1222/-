@@ -1,0 +1,121 @@
+  @import "/style/weui.wxss";   
+page,
+.page,
+.page__bd{
+    height: 100%;
+}
+.page__bd{
+    padding-bottom: 0;
+}
+/* navBar 中的字体颜色  */
+.weui-navbar__item.weui-bar__item_on {
+  color: #F66E3E;
+}
+/* navBar 中下划线背景颜色  */
+.weui-navbar__slider{
+  background-color: #F66E3E;
+}
+
+/* 最近的节日列表  */
+.weui-tab__content {
+  padding: 0 20rpx;
+  text-align: left;
+  background-color: f1f0ee;
+}
+
+.festivalList {
+  display: flex;
+  height: 70rpx;
+  align-items: center;
+  margin-top: 20rpx;
+  border: 1rpx solid #cecece;
+  background-color: #f3f3f3;
+  border-radius: 10rpx;
+  font-size: 13pt;
+}
+.festivalList .festivalInfo{
+  flex: 7;
+  padding: 0 25rpx;
+}
+.festivalList .time{
+  flex: 3;
+  padding-right: 75rpx;
+  background-color: #8abfff;
+  box-sizing: border-box;
+  position: relative;
+  height: 100%;
+}
+.time .remainingDays {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+
+.time .days {
+  width: 75rpx;
+  position: absolute;
+  height: 70rpx;
+  line-height: 70rpx;
+  right: 0;
+  top: 0;
+  text-align: center;
+  background-color: #3771bb;
+} 
+
+/* 生日和纪念日样式  */
+
+.festivalList .info{
+  flex: 5;
+  padding: 0 25rpx;
+}
+
+
+.festivalList .data{
+  flex: 5;
+  display: flex;
+  justify-content: space-between;
+}
+
+ .data .icon-small{
+  padding: 10rpx 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} 
+/* 添加新的纪念日  */
+ .createFestival {
+  position: absolute;
+  z-index: 333;
+  bottom: 20rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220rpx;
+  height: 80rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1rpx solid #cecece;
+  box-shadow: 1px 1px 1px #ccc;
+  background-color: #fff;
+  border-radius: 50rpx;
+}
+.createFestival .iconfont {
+  margin-top: 6rpx; 
+  height: 45rpx; 
+  color: #007bff;
+  font-size: 20pt;
+  line-height: 45rpx;
+} 
+.createFestival .new {
+  color: #353535;
+  font-size: 8pt;
+}
+.tips {
+  font-size: 28rpx;
+  text-align: center;
+  padding: 30rpx 0 10rpx ;
+  color: #ccc;
+}

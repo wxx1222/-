@@ -1,0 +1,120 @@
+@import "/style/weui.wxss";
+page {
+   width: 100%;
+   height: 100%; 
+   background-color: #fff;
+}
+.photoAndVideo {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 100rpx;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.photoAndVideo .showPhotoAndVideo{
+  flex: 1;
+  display: flex;
+  padding: 0 15rpx;
+  justify-content: center;
+  align-items: center;
+  max-height: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+ .photoAndVideo video{
+  max-height: 100% !important;
+  max-width: 720rpx !important;
+  min-height: 225px;
+  min-width: 300px;
+} 
+
+.photoAndVideoBtn .releaseBtn {
+  color: #fff;
+  border-color: #f66e3e;
+  background-color: #f66e3e;
+}
+
+
+/* 上传图片及预览  */
+.uploadPhoto {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+}
+.weui-cell {
+  padding: 0;
+  flex: 1;
+  align-items: initial;
+  -webkit-box-align:initial;
+  -webkit-align-items:initial;
+  margin-bottom: 100rpx;
+}
+.weui-uploader__hd {
+  background-color: rgba(248, 248, 248, 0.5);
+  border-top: 1rpx solid #eee;
+  border-bottom: 1rpx solid #eee;
+  padding: 16rpx 30rpx;
+  font-size: 14pt;
+  color: #f66e3e;
+}
+
+.weui-uploader__bd {
+  margin-bottom: 0;
+  margin-right: 0;
+}
+
+.weui-uploader__files {
+  display: flex;
+  flex-wrap: wrap;
+  padding:  10rpx 15rpx;
+  margin: 0;
+  box-sizing: border-box;
+}
+.weui-uploader__file {
+  width: 220rpx;
+  height: 220rpx;
+  box-sizing: border-box;
+  /* padding: 10rpx; */
+  margin: 10rpx ;
+}
+.weui-uploader__file .weui-uploader__img {
+  width: 100%;
+  height: 100%;
+}
+.weui-uploader__input-box {
+  width: 220rpx;
+  height: 220rpx;
+  box-sizing: border-box;
+  /* padding: 10rpx; */
+  margin: 10rpx ;
+}
+.uploadAlbumBtn {
+  width: 100%;
+  height: 100rpx;
+  border-top: 1rpx solid #ccc;
+  background-color: #e3e3e3; 
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 10rpx;
+}
+
+.uploadAlbumBtn .releaseBtn{
+  width: 260rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #fff;
+  border-color: #F66E3E;
+  background-color:  #F66E3E;
+  letter-spacing: 4px;
+}
+/* .uploadAlbumBtn .cancelBtn{
+  color: #F66E3E;
+  border-color:  #F66E3E;
+} */

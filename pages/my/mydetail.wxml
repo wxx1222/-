@@ -1,0 +1,46 @@
+<view class='formItem'>
+  <view class='image-small'>头像</view>
+  <view class="my-info-right">
+    <image wx:if="{{avatarUrl}}" src="{{avatarUrl}}" />
+  </view>
+</view>
+<view class='showItem' wx:if='{{!edit}}'>
+  <view class='formItem'>
+    <view class='image-small'>昵称</view>
+    <view class="my-info-right">{{memberNickName}}</view>
+  </view>
+  <view class='formItem'>
+    <view class='image-small'>身份</view>
+    <view class="my-info-right">{{fullName}}</view>
+  </view>
+  <!-- <view class='formItem'>
+    <view class='image-small'>手机</view>
+    <view class="my-info-right">{{mobilePhone}}</view>
+  </view> -->
+  <view class='edit'>
+    <button hover-class='other-button-hover' bindtap='editHandle'>编辑</button>
+  </view>
+</view>
+<view class='editItem' wx:if="{{edit}}">
+  <form bindsubmit="formSubmit" report-submit="true">
+    <view class='formItem'>
+      <view class='image-small'>昵称</view>
+      <input placeholder="请输入您要修改的昵称" name="memberNickName" value='{{memberNickName}}' placeholder-class="placeholderStyle" focus/>
+    </view>
+    <view class='formItem'>
+      <view class='image-small'>身份</view>
+      <!-- <input placeholder="请输入您的身份类型" name="identityType" placeholder-class="placeholderStyle" /> -->
+      <picker bindchange="bindRoleChange" name="roleCode" value="{{roleIndex}}" range-key="fullName" range="{{roleList}}">
+        <view class="weui-select ">{{roleList[roleIndex].fullName}}</view>
+      </picker>
+    </view>
+    <!-- <view class='formItem'>
+      <view class='image-small'>手机</view>
+      <input class="weui-input" placeholder="手机号" name="mobilePhone" value='{{mobilePhone}}' type='number' placeholder-class="placeholderStyle" />
+    </view> -->
+    <view class='submit'>
+      <button class='cancelBtn' plain='true' hover-class='other-button-hover' bindtap='cancelHandle'>取消</button>
+      <button class='confirmBtn' formType="submit" hover-class='other-button-hover'>确认</button>
+    </view>
+  </form>
+</view>

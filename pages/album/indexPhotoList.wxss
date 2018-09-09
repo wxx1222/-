@@ -1,0 +1,223 @@
+page {
+  width: 100%;
+  height: 100%;
+}
+.container {
+  margin-bottom: 120rpx;
+}
+.albumName {
+  background-color: rgba(248, 248, 248, 0.5);
+  font-size: 15pt;
+  color:#f66e3e;
+  letter-spacing: 2px;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  box-sizing: border-box;
+  font-weight: 500;
+}
+
+.albumDate {
+  border-top: 1rpx solid #eee;
+  padding:10rpx 30rpx;
+  border-bottom: 1rpx solid #eee;
+  font-size: 13pt;
+  line-height: 60rpx;
+}
+.photoList {
+  padding: 10rpx 15rpx;
+  box-sizing: border-box;
+   display: flex;
+  flex-wrap: wrap;
+}
+
+.photoList .photoContainer {
+  width: 240rpx;
+  height: 240rpx;
+  padding: 10rpx;
+  box-sizing: border-box;
+ 
+}
+.photoContainer .photo,
+.photo .videoContainer {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.photo image ,
+.videoContainer>image{
+  width: 100%;
+  height: 100%;
+}
+
+.videoContainer .media {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 80rpx;
+  height: 80rpx;
+  z-index: 99;
+  background-color: rgba(248, 248, 248, 0.5);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.media image {
+  width:60rpx;
+  height:60rpx;
+}
+
+
+.tips {
+  font-size: 28rpx;
+  text-align: center;
+  padding: 50rpx;
+  color: #ccc;
+}
+.tips image,
+.tips text {
+  vertical-align: middle;
+}
+.tips image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+}
+
+/* 编辑按钮  */
+
+.operate {
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  border-top: 1rpx solid #eee;
+  position: fixed;
+  width: 100%;
+  height: 120rpx;
+  padding: 10rpx 0;
+  box-sizing: border-box;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #f66e3e;
+  background-color: #fff;
+  z-index: 555;
+}
+.operate .iconfont {
+  font-weight: 500;
+  font-size: 30pt;
+  text-align: center;
+}
+.operate .fabu {
+  font-weight: 500;
+  font-size: 11pt;
+}
+/* 发布盒子*/
+
+.releaseBox {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #e3e3e3;
+  z-index: 666;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.releaseBox .textDescription {
+  font-size: 17pt;
+  color: #f66e3e;
+  text-align: center;
+  letter-spacing: 3px;
+  flex: 3;
+  font-weight: 600;
+  padding: 200rpx 150rpx;
+  box-sizing: border-box;
+}
+/* 关闭按钮样式  */
+
+.releaseBox .close {
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-top: 1rpx solid #ccc;
+  color: #f66e3e;
+  text-align: center;
+  font-size: 20pt;
+  font-weight: 500;
+}
+/* 相机相册等功能列表样式  */
+
+.function {
+  /* height: 300rpx; */
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 100rpx 20rpx;
+}
+
+.function .item {
+  width: 120rpx;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+.item text {
+  color: #f66e3e;
+}
+.item .iconfont {
+  font-size: 30px;
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  line-height: 120rpx;
+  text-align: center;
+  color: #fff;
+  background-color: #f66e3e;
+  margin-bottom: 30rpx; 
+}
+
+/* 视频播放器样式  */
+/* .video {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15rpx 100rpx;
+  box-sizing: border-box;
+  background-color: #e3e3e3;
+  z-index: 8888;
+}
+.video video {
+  max-height: 100% !important;
+  max-width: 720rpx !important;
+  min-height: 225px;
+  min-width: 300px;
+}
+.video .close {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-top: 1rpx solid #ccc;
+  color: #f66e3e;
+  text-align: center;
+  font-size: 30px;
+
+} */

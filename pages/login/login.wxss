@@ -1,0 +1,99 @@
+page {
+  width: 100%;
+  height: 100%;
+  /* background: url(" http://img01.taopic.com/160324/240390-1603240U52482.jpg") no-repeat center center scroll; */
+  /* background: url("http://pic.35pic.com/normal/08/04/38/6608733_122912579000_2.jpg") no-repeat center center scroll; */
+    /* background: url("http://pic21.photophoto.cn/20111115/0010023154603413_b.jpg") no-repeat center center scroll; */
+     background: url("http://img0.imgtn.bdimg.com/it/u=1467973690,2996569697&fm=214&gp=0.jpg") no-repeat center center scroll;
+
+  background-size: 100% 100%;
+
+}
+
+.bgc {
+  width: 100%;
+  height: 100%;
+  padding-top: 250rpx;
+  box-sizing: border-box;
+   background-color: rgba(0, 0, 0, 0.5);  
+}
+.title {
+  font-size: 20pt;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 4px;
+  color: #f66e2e;
+}
+
+.description {
+  margin-top: 200rpx;
+  padding: 60rpx 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 11pt;
+  color: #f66e2e;
+}
+.description text {
+  margin-top: 10rpx;
+}
+
+.link {
+  padding: 0 200rpx;
+  margin-bottom: 40rpx;
+}
+
+.link navigator {
+  border-radius: 23px;
+}
+
+.link navigator button {
+  border-radius: 23px;
+  border-color: red;
+  background-color: #f66e3e;
+  color: #fff;
+  letter-spacing: 5px;
+  font-weight: 500;
+}
+
+.link navigator .other-button-hover {
+  background: #f66e2e;
+  border-bottom: 1px solid #f66e4e;
+  box-shadow: 1px 1px 1px #ccc;
+  font-weight: 600;
+}
+
+.introduction navigator {
+  height: 60rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 11pt;
+  color: #f66e2e;
+}
+
+.introduction .iconfont {
+  font-size: 15pt;
+}
+
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #f8f8f8;
+  overflow: hidden;
+  z-index: 555;
+}
+.modal-mask button{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 23px;
+  background-color: #f66e3e;
+  color: #fff;
+  font-weight: 500;
+  width: 500rpx;
+}

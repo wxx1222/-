@@ -1,0 +1,105 @@
+page {
+  background-color: #efefef;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+}
+
+.familyCreateForm {
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 160rpx 50rpx 0; 
+}
+
+
+.invitationInfo {
+  text-align: center;
+  font-size: 17pt;
+  font-weight: 500;
+  padding: 80rpx 0;
+  color: #F66E2E;
+}
+
+.choose {
+  font-size: 12pt;
+  color: gray;
+  text-align: center;
+  padding: 30rpx 0 70rpx;
+  
+}
+
+.formItem {
+  display: flex;
+  align-items: center;
+  padding: 20rpx 105rpx;
+  
+}
+.formItem .iconfont {
+    font-size: 23px;
+    color: #F66E3E;
+}
+.formItem .image-small{
+  height: 60rpx;
+  text-align: center;
+  width: 100rpx;
+  padding-right: 30rpx;
+  box-sizing: border-box;
+}
+
+.formItem picker {
+  height: 60rpx;
+  width: 300rpx;
+  line-height: 60rpx;
+  font-size: 12pt;
+  color: #353535;
+  border: 1rpx solid #ccc;
+  border-radius: 10rpx;
+  padding-left: 20rpx;
+}
+
+.btn {
+  margin-top: 70rpx;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  padding: 0 30rpx;
+  justify-content: space-around;
+}
+.btn .cancel {
+  border-color: #F66E3E;
+  border-radius: 23px;
+}
+.btn .submit {
+  border-radius: 23px;
+  background-color: #F66E3E;
+  color: #fff;
+  letter-spacing: 5px;
+  font-weight: 500;
+}
+
+.other-button-hover {
+    background: #F66E2E;
+    border-bottom: 1px solid #F66E4E;
+    box-shadow: 1px 1px 1px #ccc;
+    font-weight: 600;
+}
+
+
+.introduction {
+  margin-top: 60rpx;
+}
+
+.introduction navigator{
+  height: 60rpx; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 11pt;
+  color: grey;
+}
+ .introduction .iconfont{
+  font-size: 15pt;
+} 

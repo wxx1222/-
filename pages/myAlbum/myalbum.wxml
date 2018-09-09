@@ -1,0 +1,34 @@
+<view class="itemTitle">
+    <view class="headline">我的相册列表</view>
+  </view>
+<view class='album'>
+<view  class='picContainer'  wx:for="{{albumPicList}}"   wx:key="id" >
+   <navigator hover-class='none' url='/pages/myAlbum/myPhotoList?albumID={{item.id}}&albumName={{item.file_name}}'>
+    <image src="{{item.file_url}}" mode="aspectFill"></image>
+    <text class='albumName'>{{item.file_name}}</text>
+  </navigator>
+  <view class='operate' data-id='{{item.id}}' bindtap='operateHandle'>
+      <text class='dot' space="ensp">. . .</text>
+      <view class='operateBtn' wx:if="{{item.id===editId}}">
+          <view data-id='{{item.id}}' data-name='{{item.file_name}}' bindtap='editAlbumHandle'>重命名</view>
+          <view data-id='{{item.id}}' bindtap='deleteAlbumHandle'>删  除</view>
+      </view>
+  </view>
+
+</view>
+</view>
+<!--相册创建弹窗-->
+<view class="modal-mask" catchtouchmove="preventTouchMove" hidden='{{!showMask}}'></view>
+<view class="modal-dialog" hidden="{{!showAlbum}}">
+  <view class="modal-title">修改相册名称</view>
+  <view class="modal-content">
+    <view class="modal-input">
+      <input placeholder-class="input-holder" type="text" maxlength="10" class="input" placeholder="{{oldFileName}}" bindinput="albumNameChange" value='{{albumName}}'></input>
+    </view>
+  </view>
+  <view class="modal-footer">
+    <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+    <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">确定</view>
+  </view>
+</view>
+

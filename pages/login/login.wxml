@@ -1,0 +1,17 @@
+
+<view class='bgc'>
+  <view class='title'>
+    创建我的相册
+  </view>
+<view class='description'>
+  <text>一款拉近亲情关系，记录美好回忆的平台</text>
+</view>
+<view class='link'>
+  <navigator url="/pages/form/form"  hover-class='none'>
+    <button hover-class='other-button-hover'>创建</button>
+  </navigator>
+  </view>
+  </view>
+  <view class="modal-mask" catchtouchmove="preventTouchMove" hidden='{{!showMask}}'>
+       <button open-type="getUserInfo" bindgetuserinfo="getUserInfo">请在微信授权后使用</button> 
+  </view>

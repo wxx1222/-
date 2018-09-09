@@ -1,0 +1,73 @@
+<!--相册列表   -->
+<view class='container'>
+    <view class='albumName'>
+      {{albumName}}
+    </view>
+    <view class='albumItem' wx:for="{{ablumList}}" wx:key="id">
+      <view class='albumDate'>{{item.date}}</view>
+      <view class='photoList'>
+        <view class='photoContainer' 
+              wx:for="{{item.photoList}}" 
+              wx:for-item="photoItem"
+              wx:key="id" >
+              <view class='photo'>
+                <view wx:if="{{photoItem.cover_url}}" class='videoContainer' >
+                  <image src="{{photoItem.cover_url}}" mode="aspectFill"></image>
+                  <view class='media'>
+                    <image src='/images/media.png'
+                          bindtap='showVideoHandle'
+                          data-video-src='{{photoItem.url}}'
+                          data-width='{{photoItem.width}}'
+                          data-height='{{photoItem.high}}'></image>
+                  </view>
+              </view>
+               <view wx:else class='photo'
+                    data-src="{{photoItem.url}}" 
+                    data-id='{{item.id}}' 
+                    bindtap="previewImage">
+                <image  src="{{photoItem.url}}" mode="aspectFill"></image>
+              </view>
+            </view>
+          </view>
+        </view>
+    </view>
+  
+    <view class="tips" hidden='{{hidTips}}'>
+      <view wx:if="{{ hasMore }}">
+        <image src="/images/loading.gif" mode="aspectFill"/>
+        <text>加载中...</text>
+      </view>
+      <view wx:else>
+        <text>已经没有更多内容了...</text>
+      </view>
+    </view>
+    <view class="tips" hidden='{{noPhoto}}'>一张照片也没有哦，快去上传照片吧</view>
+ </view>
+<!--操作按钮  -->
+<view class='operate' bindtap='showReleaseBoxHandle'>
+    <view class='iconfont icon-plus1'></view>
+</view>
+<!-- 发布照片视屏和图片  -->
+<view class='releaseBox' hidden='{{!showReleaseBox}}'>
+    <view class='textDescription'>随时记录美好时刻</view>
+    <view class='function'>
+        <view class='item' bindtap='takePhotoHandle'>
+              <view class='iconfont icon-camera'></view>
+              <view>拍照片</view>
+        </view>
+        <view class='item' bindtap='choosePhotoHandle'>
+           <view class='iconfont icon-ico-presetphoto-n'></view>
+            <view>选照片</view>
+        </view>
+        <view class='item' bindtap='shootVideoHandle'>
+               <view class='iconfont icon-cameravideo'></view>
+              <view>拍视频</view>
+        </view>
+        <view class='item' bindtap='chooseVideoHandle'>
+               <view class='iconfont icon-cameravideo'></view>
+              <view>选视频</view>
+        </view>
+    </view>
+     <view class='close iconfont icon-iconhomeclose' bindtap='closeReleaseBoxHandle'>
+     </view>
+</view>

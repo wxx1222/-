@@ -1,0 +1,59 @@
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-tab">
+      <view class="weui-navbar">
+        <block wx:for="{{tabs}}" wx:key="*this">
+          <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+            <view class="weui-navbar__title">{{item}}</view>
+          </view>
+        </block>
+        <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+      </view>
+      <view class="weui-tab__panel">
+        <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+         <view class='tips' wx:if="{{!festivalList.length}}">没有内容呢</view>
+
+        <!-- 节日列表  -->
+          <view class='festivalList' wx:for="{{festivalList}}" wx:key='ID'>
+            <view class='festivalInfo'>{{item.HOLIDAY_NAME}}</view>
+            <view class='time'>
+              <text class='remainingDays'>{{item.h_day}}</text>
+              <text class='days'>天</text>
+            </view>
+          </view>
+        </view>
+        <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+         <view class='tips' wx:if="{{!birthdayList.length}}">没有内容呢，点击下面的按钮添加的生日吧</view>
+        <!-- 生日列表  -->
+         
+          <view class='festivalList' wx:for="{{birthdayList}}" wx:key='ID'>
+            <view class='info'>{{item.HOLIDAY_NAME}}</view>
+            <view class='data'>
+              <text>{{item.HOLIDAY_START_TIME}}</text>
+              <icon class="icon-small" size="20" type="cancel" bindtap="deleteBirthday" data-id="{{item.ID}}"></icon>
+            </view>
+          </view>
+          <view class='createFestival' bindtap='createFestival'>
+               <text class='iconfont icon-plus'></text>
+               <text class='new'>新建</text>
+          </view>
+        </view>
+        <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+        <!-- 纪念日列表  -->
+          <view class='tips' wx:if="{{!memorialDaysList.length}}">没有内容呢，点击下面的按钮记录曾经难忘的日子吧</view>
+          <view class='festivalList' wx:for="{{memorialDaysList}}" wx:key='ID'>
+           <view class='info'>{{item.HOLIDAY_NAME}}</view>
+            <view class='data'>
+              <text>{{item.HOLIDAY_START_TIME}}</text>
+              <icon class="icon-small" size="20" type="cancel" bindtap="deleteBirthday" data-id="{{item.ID}}" ></icon>
+            </view>
+          </view>
+          <view class='createFestival' bindtap='createFestival'>
+             <text class='iconfont icon-plus'></text>
+             <text class='new'>新建</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

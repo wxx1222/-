@@ -1,0 +1,59 @@
+  @import "/style/weui.wxss"; 
+
+page {
+  background-color: #efefec;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15rpx;
+}
+
+.festivalCreateForm {
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 40rpx 20rpx 0;
+}
+.weui-cells {
+  position: static;
+  border: 1rpx solid #c5c5c4;
+  border-radius: 10rpx;
+}
+.weui-cell {
+  position: static;
+  border-bottom: 1rpx solid #c5c5c4; 
+  background-color: #f7f7f7;
+  padding: 0 15px;
+  height: 80rpx;
+}
+.weui-cell:last-child{
+  border: none;
+}
+.weui-cell .icon-homefooter2{
+   padding-right: 4rpx;
+   color: #353535;
+   font-size: 26px;
+}
+.weui-cell .icon-calendar2 {
+  padding-left: 6rpx;
+  padding-right: 28rpx;
+  color: #000;
+  font-size: 26px;
+  font-weight: 500;
+}
+.weui-cell__hd {
+  font-size: 12pt;
+  padding-left: 4rpx;
+  padding-right: 8rpx;
+}
+.weui-cell__bd input {
+  padding-left: 15rpx;
+}
+.save {
+  margin-top: 25rpx;
+  background-color: #0e85bf;
+  border-color: #0e85bf;
+  color: #fff;
+  letter-spacing: 3px;
+}

@@ -1,0 +1,69 @@
+<!--相册列表   -->
+<view class='container'>
+    <view class='albumName'>
+      {{albumName}}
+    </view>
+    <checkbox-group bindchange="checkboxChange">
+    <view class='albumItem' wx:for="{{ablumList}}" wx:key="id">
+      <view class='albumDate'>{{item.date}}</view>
+      <view class='photoList'>
+      <view class='photoContainer' 
+            wx:for="{{item.photoList}}" 
+            wx:for-item="photoItem"
+            wx:key="id" >
+        <view class='photo'>
+          <view wx:if="{{photoItem.cover_url}}" class='videoContainer' >
+            <image src="{{photoItem.cover_url}}" mode="aspectFill"></image>
+            <view class='media'>
+            <image src='/images/media.png'
+                  bindtap='showVideoHandle'
+                  data-video-src='{{photoItem.url}}'
+                  data-width='{{photoItem.width}}'
+                  data-height='{{photoItem.high}}'></image>
+            </view>
+          </view>
+          <view wx:else class='photo'
+                data-src="{{photoItem.url}}" 
+                data-id='{{item.id}}' 
+                bindtap="previewImage">
+             <image  src="{{photoItem.url}}" mode="aspectFill"></image>
+          </view>
+         
+        </view>
+        <view class="administratorDelete" 
+                hidden='{{!showDelete}}'>
+                <checkbox value="{{photoItem.id}}"/>  
+          </view> 
+        </view>
+      </view>
+    </view>
+    </checkbox-group>
+    <view class="tips" hidden='{{hidTips}}'>
+      <view wx:if="{{ hasMore }}">
+        <image src="/images/loading.gif" mode="aspectFill"/>
+        <text>加载中...</text>
+      </view>
+      <view wx:else>
+        <text>已经没有更多内容了...</text>
+      </view>
+    </view>
+    <view class="tips" hidden='{{noPhoto}}'>一张照片也没有哦，快去上传照片吧</view>
+ </view>
+<!--操作按钮  -->
+<view class='operate'>
+  <button size="mini" hidden='{{isCancel}}' class='edit' bindtap='editHandle' disabled="{{isEditBut}}">编辑</button>
+  <button size="mini" class='edit' hidden='{{!isCancel}}' bindtap='cancelHandle' >取消</button>
+  <button size="mini" class='delete' plain="true" bindtap='deleteHandle' disabled="{{isDeleteBtn}}">删除</button>
+</view>
+
+<!-- <view class='video' hidden='{{!showVideo}}'>
+      <video  src="{{videoSrc}}"  
+              id='myVideo' 
+              objectFit="fill" 
+              loop="{{false}}" 
+              controls='{{true}}' 
+              style='width:{{width}}px;height:{{height}}px'
+              custom-cache="{{false}}" 
+              binderror="videoPlayError"></video>
+   <view  class='close iconfont icon-iconhomeclose' bindtap='closeVideoHandle'></view>
+</view> -->

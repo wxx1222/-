@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/form/form",
+    "pages/album/indexPhotoList",
+    "pages/festival/festival",
+    "pages/my/my",
+    "pages/my/mydetail",
+    "pages/familyList/familyList",
+    "pages/festival/createFestival",
+    "pages/show/show",
+    "pages/myAlbum/myPhotoList",
+    "pages/myAlbum/myalbum",
+    "pages/share/share",
+    "pages/videoPage/videoPage"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F66E3E",
+    "navigationBarTitleText": "叮当相册",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#373b46",
+    "selectedColor": "#fe5c50",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/homeSelected.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/festival/festival",
+        "iconPath": "images/todos.png",
+        "selectedIconPath": "images/todos-active.png",
+        "text": "节日"
+      },
+        {
+          "pagePath": "pages/my/my",
+          "iconPath": "images/my.png",
+          "selectedIconPath": "images/mySelected.png",
+          "text": "我的"
+        }
+    ]
+  }
+}

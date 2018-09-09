@@ -1,0 +1,84 @@
+<!-- 家庭列表  -->
+<view class="page__bd page__bd_spacing" wx:if="{{isHaveList == 0}}">
+  <view class="kind-list">
+    <block wx:for="{{list}}" wx:key="id">
+      <view class="kind-list__item">
+        <view class='familyName'>
+          <view id="{{item.id}}"
+                class="weui-flex kind-list__item-hd {{item.open ? 'kind-list__item-hd_show' : ''}}"
+                bindtap="kindToggle"
+                hidden='{{item.id == editId ? true : false}}'
+                data-open='{{item.open}}'
+                >
+            <view class="weui-flex__item">
+                  {{item.familyName}}
+            </view>
+          </view>
+          <input bindblur="blurHandle"
+                 placeholder='{{item.familyName}}' 
+                 data-family-name='{{item.familyName}}'
+                 data-family-id='{{item.id}}'
+                 wx:if="{{item.id == editId ? true : false}}"></input>
+        </view>
+        <view class="kind-list__item-bd {{item.open ? 'kind-list__item-bd_show' : ''}}">
+          <view class="weui-cells {{item.open ? 'weui-cells_show' : ''}}">
+            <!--隐藏家庭详细内容  -->
+            <view class='userInfo'>
+              <block wx:for="{{userList}}"
+                     wx:key="threerdSession" 
+                     wx:for-item="userItem">
+                <view class="picContainer">
+                  <image src="{{userItem.avaterURL}}" mode="aspectFill"></image>
+                  <text class='userName'>{{userItem.memberNickName}}</text>
+                  <!-- 管理员删除用户的状态显示  -->
+                   <view class="administratorDelete" 
+                         wx:if="{{item.id == editId ? true : false}}"
+                         bindtap='deleteUserNameHandle'
+                         data-user-name='{{userItem.memberNickName}}'
+                         data-threerdSession="{{userItem.threerdSession}}"
+                         data-familyid='{{item.id}}'>
+                         <view class='iconfont icon-iconhomeclose'></view>
+                   </view> 
+                </view>
+              </block>
+              <button class='picContainer addMemberBtn' 
+                      hover-class='none' 
+                      open-type="share"
+                      data-family-id='{{item.id}}'
+                      data-family-name='{{item.familyName}}'
+                      data-user-session='{{thisUserThreerSession}}'
+                      data-user-name='{{userInfo.nickName}}'>
+                 <text class='iconfont icon-plus'></text>
+                 <view class='userName'></view>
+              </button>
+            </view>
+            <!--操作按钮  -->
+            <view class='operate' wx:if="{{item.isAdmin==1}}">
+              <button size="mini" class='edit' hidden='{{isCancel}}' bindtap='editHandle' data-id='{{item.id}}'>编辑</button>
+              <button size="mini" class='edit' hidden='{{!isCancel}}' bindtap='cancelHandle'>取消</button>
+              <button size="mini" class='delete' plain="true" bindtap='deleteHandle' data-id='{{item.id}}'>删除</button>
+            </view>
+            <view class='operate' wx:if="{{item.isAdmin==0}}">
+              <button size="mini" class='delete' plain="true" bindtap='outFamilyHandle' data-id='{{item.id}}' data-family-name='{{item.familyName}}'>退出</button>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
+<!-- 没有家庭显示链接和信息  -->
+<view class='notHavesFamily' wx:if="{{isHaveList == 1}}">
+    <view class='container'>
+            <view>您现在没有任何家庭</view>
+    <view>请点击下方按钮去创建一个家庭</view>
+    </view>
+</view>
+<view class='notHavesFamily' wx:if="{{isHaveList == 2}}">
+</view>
+<!-- 创建列表  -->
+<view class='createFamily'>
+  <navigator bindtap='createFamilyHandle'  url='/pages/form/form' hover-class='none'>
+    <button hover-class='other-button-hover'>再创建一个</button>
+  </navigator>
+</view>

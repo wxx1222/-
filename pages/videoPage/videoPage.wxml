@@ -1,0 +1,11 @@
+<view class='videoContainer'>
+  <video src="{{src}}"
+         style='width:{{width}}px;height:{{height}}px'
+         objectFit="fill" 
+         loop="{{false}}" 
+         controls="{{true}}"
+         id='myVideo' 
+         custom-cache="{{false}}" 
+         binderror="videoPlayError"></video>
+</view>
+ <view  class='close iconfont icon-iconhomeclose' bindtap='closeVideoHandle'></view>

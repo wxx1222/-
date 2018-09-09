@@ -1,0 +1,76 @@
+page {
+  background-color: #efefef;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+}
+
+.familyCreateForm {
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 50rpx; 
+}
+
+.header {
+  font-size: 20pt;
+  font-weight: 500;
+  text-align: center;
+  padding: 60rpx 0;
+  word-spacing: 4px;
+  color: #ffa000;
+}
+
+.formItem {
+  margin: 10rpx 20rpx;
+  display: flex;
+  align-items: center;
+  padding: 20rpx 10rpx;
+  border-bottom: 1px solid #ccc;
+}
+.formItem .iconfont {
+    font-size: 23px;
+    color: #F66E3E;
+}
+.formItem .image-small{
+  flex: 1;
+  text-align: center;
+}
+.groupAndPerson .iconfont {
+  font-size: 30px;
+}
+.formItem input {
+  flex: 3;
+  font-size: 12pt;
+}
+.placeholderStyle {
+  color: gray;
+}
+.formItem picker {
+  flex: 3;
+  font-size: 12pt;
+  color: gray;
+}
+
+
+.submit {
+  padding: 80rpx 130rpx;
+  border-radius: 23px;
+}
+
+.submit button {
+  border-radius: 23px;
+  background-color: #F66E3E;
+  color: #fff;
+  letter-spacing: 5px;
+  font-weight: 500;
+}
+
+.submit .other-button-hover {
+    background: #F66E2E;
+    border-bottom: 1px solid #F66E4E;
+    box-shadow: 1px 1px 1px #ccc;
+    font-weight: 600;
+}

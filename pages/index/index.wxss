@@ -1,0 +1,678 @@
+/*描述  */
+.description {
+  padding: 20rpx 30rpx;
+  font-size: 15pt;
+  letter-spacing: 2px;
+  text-indent: 25px;
+  line-height: 90rpx;
+  color: rgba(0, 0, 0, 0.4);
+  font-weight: 500;
+}
+
+/* 徽标样式  */
+page {
+  width: 100%;
+  height: 100%;
+}
+.weui-badge {
+  display: inline-block;
+  padding: 0.15em 0.4em;
+  min-width: 8px;
+  border-radius: 18px;
+  background-color: #e64340;
+  color: #fff;
+  line-height: 1.2;
+  text-align: center;
+  font-size: 12px;
+  vertical-align: middle;
+  position: absolute;
+  top: 0;
+  right: 10rpx;
+}
+
+/* 首次进入页面指示样式   */
+.instructions {
+  height: 200rpx;
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 100%;
+  position: fixed;
+  top: 20rpx;
+  left: 0;
+  z-index: 6666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #353535;
+}
+.instructions .pointArrow {
+  width: 0;
+  height: 0;
+  position: absolute;
+  right: 120rpx;
+  top: -60rpx;
+  border: 30rpx solid;
+  border-color: #f8f8f8 #f8f8f8 #dfdfdf #f8f8f8;
+
+}
+.instructions .textDescription {
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-size: 15pt;
+}
+.instructions .iconfont {
+  position: absolute;
+  right: 10rpx;
+  top: 10rpx;
+  font-size: 17pt;
+}
+/* header 部分  */
+
+.familyTitle {
+  text-align: center;
+  background-color: #f8f8f8;
+  font-size: 15pt;
+  color: #f66e3e;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.familyTitle .families, .familyTitle .share {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.families .iconfont{
+    padding: 0 30rpx;
+    font-size: 15pt;
+    font-weight: 600;
+}
+.familyTitle .families {
+  position: relative;
+  flex: 1;
+}
+.families .list {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.families .familyList {
+  position: absolute;
+  background-color: #fff;
+  width: 100%;
+  top: 100rpx;
+  left: 0;
+  z-index: 200;
+  padding: 0 10rpx;
+  height: auto;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.familyList .familyItem {
+  height: 86rpx;
+  line-height: 80rpx;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid #eee;
+  font-size: 11pt;
+   overflow: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+  color: #576b95;
+}
+
+
+.familyTitle .share {
+  width: 160rpx;
+  height: 100%;
+  font-size: 10pt;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.share .iconfont {
+  padding-left: 6rpx;
+}
+
+.share .shareBtn {
+  position: absolute;
+  top: 100rpx;
+  right: 0rpx;
+  width: 200rpx;
+  padding: 10rpx 10rpx 0;
+  height: auto;
+  z-index: 200;
+  background-color: #fff;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.shareBtn button {
+  border: none;
+  border-bottom: 1rpx solid #eee;
+  margin-bottom: 10rpx;
+  font-size: 11pt;
+  color: #576b95;
+}
+
+.other-button-hover {
+  opacity: 0.8;
+  border: none;
+  font-weight: 500;
+}
+
+.itemTitle {
+  background-color: rgba(248, 248, 248, 0.5);
+  border-top: 1rpx solid #eee;
+  border-bottom: 1rpx solid #eee;
+  padding: 16rpx 30rpx;
+}
+
+.itemTitle .headline {
+  font-size: 14pt;
+  color: #f66e3e;
+  letter-spacing: 2px;
+}
+
+/* 相册列表  */
+
+.album {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30rpx 15rpx 0;
+  box-sizing: border-box;
+  background-color: #fff;
+  /* max-height: 446rpx;
+  overflow-y: auto; */
+}
+
+.album .picContainer {
+  width: 180rpx;
+  height: 180rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30rpx;
+  position: relative;
+}
+
+.album .picContainer image {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  border: 4rpx solid #fff0b1;
+}
+
+.album .picContainer .albumName {
+  font-size: 11pt;
+  color: #888;
+  width: 100%;
+  margin-top: 10rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+}
+.picContainer .iconfont {
+  font-weight: 600;
+  font-size: 40pt;
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  border: 4rpx solid #fff0b1;
+  color: lightgray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 动态列表  */
+
+.release {
+  padding: 20rpx 15rpx;
+  background-color: #fff;
+  border-bottom: 1rpx solid #eee;
+}
+
+.releaseUserInfo {
+  padding-bottom: 20rpx;
+  box-sizing: border-box;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  font-size: 13pt;
+  color: #38f;
+}
+
+.releaseUserInfo image {
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+  margin: 0 30rpx;
+}
+
+/* 图片渲染  */
+
+.releasePictures {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* 一张图片样式  */
+
+.releasePictures .singlePic {
+  width: 100%;
+  padding: 10rpx;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.singlePic image{
+  width: 100%;
+}
+.singlePic .media {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 80rpx;
+  height: 80rpx;
+  z-index: 99;
+  background-color: rgba(248, 248, 248, 0.5);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.media image {
+  width:60rpx;
+  height:60rpx;
+}
+/*宽 720  */
+.voice {
+  height: 100rpx;
+  padding: 15rpx 10rpx;
+  position:relative;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+/*宽根据时间定义 最大 680 - 40 = 640   */
+.voiceContainer {
+  height: 80rpx;
+  /* line-height: 80rpx; */
+  background-color: #38f;
+  margin-left: 26rpx;
+  border-radius: 10rpx;
+  padding: 0 50rpx 0 10rpx;
+  display: flex;
+  align-items: center;
+}
+.voiceContainer .iconfont {
+  font-size: 18pt;
+  font-weight: 500;
+  color: #353535;
+}
+.voiceContainer .voiceGif {
+  width: 60rpx;
+  height: 60rpx;
+}
+.voice .arrow {
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 18rpx solid;
+  border-color: #fff #38f #fff #fff;
+}
+.voice .second {
+  padding-left: 20rpx;
+}
+/* 多张图片样式  */
+
+.releasePictures .multiplePic {
+  width: 33.33%;
+  height: 240rpx;
+  box-sizing: border-box;
+  padding: 10rpx;
+}
+
+.multiplePic image {
+  width: 100%;
+  height: 100%;
+}
+
+.releaseInfo {
+  display: flex;
+  font-size: 11pt;
+  justify-content: space-between;
+  padding: 20rpx 10rpx;
+}
+
+.releaseInfo .releaseTime {
+  color: #b2b2b2;
+  display: flex;
+}
+
+.releaseTime .delete {
+  color: #567b95;
+  margin-left: 20rpx;
+  font-size: 10pt;
+}
+
+.releaseInfo .admire {
+  color: red;
+  padding-right: 20rpx;
+}
+
+/* 文字渲染  */
+.content {
+  padding: 20rpx;
+  color: #353535;
+  font-size: 14pt;
+}
+.content .words {
+  word-wrap:break-word ;
+  word-break:break-all;
+}
+/* 点赞列表  */
+
+.admireList {
+  display: flex;
+  margin: 0 10rpx;
+  padding: 20rpx 0;
+  background-color: #eee;
+  position: relative;
+  color: #353535;
+}
+
+.admireList .arrow {
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 20rpx;
+  top: -28rpx;
+  border: 16rpx solid;
+  border-color: #fff #fff #eee #fff;
+}
+
+.admireList .heart {
+  flex: 1;
+  text-align: center;
+}
+
+.admireUserList {
+  flex: 9;
+  font-size: 10pt;
+  box-sizing: border-box;
+}
+
+.admireUserList text {
+  display: inline-block;
+  padding-top: 5rpx;
+  padding-bottom: 10rpx;
+}
+
+/* 加载样式  */
+.moodList .tips {
+  font-size: 28rpx;
+  text-align: center;
+  padding: 50rpx;
+  color: #ccc;
+}
+.moodList .tips image,
+.moodList .tips text {
+  vertical-align: middle;
+}
+.moodList .tips image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+}
+/* 中间发布按钮 有问题 */
+
+.releaseBtn {
+  position: fixed;
+  bottom:0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100rpx;
+  height: 145rpx;
+  z-index:88888;
+  display: flex;
+  color: #f66e3e;
+  flex-direction: column;
+  justify-content: space-between;
+  /* background-color: #fff; */
+  align-items: center;
+}
+.releaseBtn .iconfont {
+  width: 100%;
+  height: 100rpx;
+  font-weight: 500;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.releaseBtn .fabu {
+  font-weight: 500;
+  font-size: 11pt;
+}
+/* 发布盒子中的按钮  */
+
+.releaseBox {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #e3e3e3;
+  z-index: 666;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.releaseBox .textDescription {
+  font-size: 17pt;
+  color: #f66e3e;
+  text-align: center;
+  letter-spacing: 3px;
+  flex:4;
+  font-weight: 600;
+  padding: 200rpx 170rpx 0;
+  box-sizing: border-box;
+}
+.releaseBox .speaking {
+  height: 200rpx;
+}
+.speaking .speak-style {
+  margin: 0 auto;
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 10rpx;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.speak-style .sound-style {
+  width: 50rpx;
+  height: 80rpx;
+  position: absolute;
+}
+/* 关闭按钮样式  */
+
+.releaseBox .close {
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-top: 1rpx solid #ccc;
+  color: #f66e3e;
+  text-align: center;
+  font-size: 20pt;
+}
+
+/* 相机相册等功能列表样式  */
+
+.function {
+  height: 240rpx; 
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 15rpx;
+  color: #353535;
+}
+
+.function .item {
+  width: 180rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 13pt;
+}
+.item .iconfont {
+  font-size: 30px;
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  line-height: 120rpx;
+  text-align: center;
+  color: #fff;
+  background-color: #f66e3e;
+  margin-bottom: 30rpx; 
+}
+
+/* 显示相册列表样式  */
+.showAlbumList {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  font-size: 13pt;
+  background-color: #eeedf2;
+  box-sizing: border-box;
+  z-index: 9999999;
+}
+.showAlbumList .title {
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 15pt;
+  color:#f66e3e;
+  font-weight: 500;
+  background-color: #fff;
+  letter-spacing: 4px;
+  border-bottom: 1rpx solid #ccc;
+}
+.showAlbumList .albumItem{
+  max-height: 600rpx;
+  overflow:auto;
+}
+.albumItem view {
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: #fff;
+  border-bottom: 1rpx solid #ccc;
+}
+.showAlbumList .cancel {
+  margin-top: 10rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  background-color: #fff;
+}
+
+/* 模态框样式  */
+
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 555;
+}
+
+.modal-dialog {
+  width: 540rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 666;
+  background: #f9f9f9;
+  transform: translate(-50%, -80%);
+  border-radius: 36rpx;
+}
+
+.modal-title {
+  padding-top: 50rpx;
+  font-size: 36rpx;
+  color: #030303;
+  text-align: center;
+}
+
+.modal-content {
+  padding: 50rpx 32rpx;
+}
+
+.modal-input {
+  display: flex;
+  background: #fff;
+  border: 2rpx solid #ddd;
+  border-radius: 4rpx;
+  font-size: 28rpx;
+}
+
+.input {
+  width: 100%;
+  height: 82rpx;
+  font-size: 28rpx;
+  line-height: 28rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  color: #333;
+}
+
+input-holder {
+  color: #666;
+  font-size: 11pt;
+}
+
+.modal-footer {
+  display: flex;
+  flex-direction: row;
+  height: 86rpx;
+  border-top: 1px solid #dedede;
+  font-size: 34rpx;
+  line-height: 86rpx;
+}
+
+.btn-cancel {
+  width: 50%;
+  color: #666;
+  text-align: center;
+  border-right: 1px solid #dedede;
+}
+
+.btn-confirm {
+  width: 50%;
+  color: #ec5300;
+  text-align: center;
+}

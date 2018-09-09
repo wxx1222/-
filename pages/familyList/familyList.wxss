@@ -1,0 +1,212 @@
+@import '/style/weui.wxss';
+
+/* 切换样式  */
+
+.weui-flex {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.weui-cells {
+  margin-top: 0;
+  opacity: 0;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.weui-cells:after, .weui-cells:before {
+  display: none;
+}
+
+.weui-cells_show {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+
+.kind-list__item {
+  margin: 10px 0;
+  background-color: #fff;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.kind-list__item:first-child {
+  margin-top: 0;
+}
+
+.familyName {
+  font-size: 14pt;
+  background-color: rgba(248, 248, 248, 0.5);
+  border-top: 1rpx solid #eee;
+  border-bottom: 1rpx solid #eee;
+  padding: 16rpx 30rpx;
+  color: #f66e3e;
+}
+.kind-list__item-hd {
+  letter-spacing: 2px;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+.kind-list__item-hd .weui-flex__item{
+  text-align: center;
+}
+.kind-list__item-hd_show {
+  opacity: 0.4;
+}
+
+.kind-list__item-bd {
+  height: 0;
+  overflow: hidden;
+}
+
+.kind-list__item-bd_show {
+  height: auto;
+}
+
+/* 内容样式  */
+
+
+/* 成员列表  */
+
+.userInfo {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10rpx;
+  box-sizing: border-box;
+}
+
+.userInfo .picContainer {
+  width: 126rpx;
+  padding: 10rpx;
+  margin: 10rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+/* 点击编辑后显示层样式 */
+.administratorDelete {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: 99;
+}
+ .administratorDelete .iconfont {
+  position: absolute;
+  top: 40rpx;
+  left: 50%;
+  transform: translateX(-50%);
+} 
+.picContainer image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 10rpx;
+  border: 2rpx solid #f66e3e;
+}
+
+.picContainer .userName {
+  width: 100%;
+  padding: 10rpx 10rpx 0; 
+  font-size: 9pt;
+  color: gray;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+}
+/* 分享按钮的样式  */
+.addMemberBtn {
+  background-color: #fff;
+  line-height: auto;
+}
+.addMemberBtn::after{
+  border: none;
+}
+.addMemberBtn .userName {
+  line-height: normal;
+}
+.addMemberBtn .iconfont {
+  border: 2rpx solid #ccc;
+  border-radius: 10rpx;
+  width: 100rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 30pt;
+  color: gray;
+}
+
+/* 编辑按钮  */
+
+.operate {
+  display: flex; 
+  justify-content: space-around; 
+  padding-top: 20rpx;
+  border-top: 1rpx solid #eee;
+}
+
+.operate .edit {
+  color: #fff;
+  border-color: #f66e3e;
+  background-color: #f66e3e;
+}
+
+.operate .delete {
+  color: #f66e3e;
+  border-color: #f66e3e;
+}
+
+.createFamily {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10rpx 170rpx;
+  background-color: rgba(248, 248, 248, 1);
+}
+
+.createFamily navigator {
+  border-radius: 23px;
+}
+
+.createFamily navigator button {
+  border-radius: 23px;
+  border-color: #f66e3e;
+  background-color: #f66e3e;
+  color: #fff;
+  letter-spacing: 3px;
+  font-weight: 500;
+}
+
+.createFamily navigator .other-button-hover {
+  background: #f66e2e;
+  border-bottom: 1px solid #f66e4e;
+  box-shadow: 1px 1px 1px #ccc;
+  font-weight: 600;
+}
+
+.notHavesFamily {
+  width: 100%;
+  height: 100%;
+
+}
+.container {
+  position: absolute;
+  top: 400rpx;
+  left: 0;
+  right: 0;
+  font-size: 17pt;
+  text-align: center;
+  color: gray;
+}
