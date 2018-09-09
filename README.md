@@ -28,11 +28,6 @@
     + 配置邮箱:  `git config --global user.email "xm@sina.com"`
 
 
-## 把大象放到冰箱要几步
-1. 打开冰箱门
-2. 放大象
-3. 关上冰箱
-
 ## 把代码存储到.git仓储中
 - 1.把代码放到仓储的门口
     + `git add ./readme.md` 所指定的文件放到大门口
